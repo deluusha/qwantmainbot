@@ -66,4 +66,114 @@ async def bot_message(message: types.Message):
 
         await bot.send_message(message.from_user.id, "Оставьте этому боту @QWANT2022bot свой отзыв")
 
+    elif message.text == 'Поддержите нас!':
+        await bot.send_message(message.from_user.id, "Вы можете поддержать нас! \nКаспи: +123456789")
 
+    if message.text == 'Опрос':
+        await bot.send_message(message.from_user.id,
+                               'Этот опрос поможет лучше понять Ваши предпочтения и дать Вам наилучшие рекомендации. '
+                               '\nКакие возможности ограничены у Вашего ребенка?',
+                               reply_markup=nav.Quiz)
+
+    if message.text == 'Нарушение слуха':
+        await bot.send_message(message.from_user.id, 'Какая у ребенка степень инвалидности?', reply_markup=nav.Quiz1)
+
+    if message.text == 'Совершенно глухой':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?', reply_markup=nav.Quiz11)
+    if message.text == 'На ментальном здоровье глухого ребенка':
+        await bot.send_message(message.from_user.id, information.text111, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии глухого ребенка':
+        await bot.send_message(message.from_user.id, information.text112, reply_markup=nav.mainMenu)
+
+    if message.text == 'Слабослышащий':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?', reply_markup=nav.Quiz12)
+    if message.text == 'На ментальном здоровье слабослышащего ребенка':
+        await bot.send_message(message.from_user.id, information.text121, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии слабослышащего ребенка':
+        await bot.send_message(message.from_user.id, information.text122, reply_markup=nav.mainMenu)
+
+    if message.text == 'Нарушение зрения':
+        await bot.send_message(message.from_user.id, 'Какая у ребенка степень инвалидности?', reply_markup=nav.Quiz2)
+
+    if message.text == 'Совершенно слепой':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?', reply_markup=nav.Quiz21)
+    if message.text == 'На ментальном здоровье слепого ребенка':
+        await bot.send_message(message.from_user.id, information.text211, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии слепого ребенка':
+        await bot.send_message(message.from_user.id, information.text212, reply_markup=nav.mainMenu)
+
+    if message.text == 'Слабовидящий':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?',
+                               reply_markup=nav.Quiz12)
+    if message.text == 'На ментальном здоровье слабовидящего ребенка':
+        await bot.send_message(message.from_user.id, information.text221, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии слабовидящего ребенка':
+        await bot.send_message(message.from_user.id, information.text222, reply_markup=nav.mainMenu)
+
+    if message.text == 'Нарушение речи':
+        await bot.send_message(message.from_user.id, 'Какая у ребенка степень инвалидности?',
+                               reply_markup=nav.Quiz3)
+
+    if message.text == 'Совершенно немой':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?',
+                               reply_markup=nav.Quiz31)
+    if message.text == 'На ментальном здоровье немого ребенка':
+        await bot.send_message(message.from_user.id, information.text311, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии немого ребенка':
+        await bot.send_message(message.from_user.id, information.text312, reply_markup=nav.mainMenu)
+
+    if message.text == 'Плохо говорит, но может':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?', reply_markup=nav.Quiz32)
+    if message.text == 'На ментальном здоровье плохоговорящего ребенка':
+        await bot.send_message(message.from_user.id, information.text321, reply_markup=nav.mainMenu)
+    elif message.text == 'На умственном развитии плохоговорящего ребенка':
+        await bot.send_message(message.from_user.id, information.text322, reply_markup=nav.mainMenu)
+
+    if message.text == 'Нарушение опорно-двигательного аппарата':
+        await bot.send_message(message.from_user.id, 'Какая у ребенка степень инвалидности?',
+                               reply_markup=nav.Quiz4)
+
+    if message.text == 'Совершенно не способен ходить':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?',
+                               reply_markup=nav.Quiz41)
+    if message.text == 'На ментальном здоровье ребенка с НОДА':
+        await bot.send_message(message.from_user.id, information.text411, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии ребенка с НОДА':
+        await bot.send_message(message.from_user.id, information.text412, reply_markup=nav.mainMenu)
+
+    if message.text == 'Может, но плохо':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?',
+                               reply_markup=nav.Quiz42)
+    if message.text == 'На ментальном здоровье ребенка с слабым НОДА':
+        await bot.send_message(message.from_user.id, information.text421, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии ребенка с слабым НОДА':
+        await bot.send_message(message.from_user.id, information.text422, reply_markup=nav.mainMenu)
+
+    if message.text == 'Умственная отсталость':
+        await bot.send_message(message.from_user.id, 'Какая у ребенка степень инвалидности?',
+                               reply_markup=nav.Quiz5)
+
+    if message.text == 'Совершенно умственно отсталый':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?',
+                               reply_markup=nav.Quiz51)
+    if message.text == 'На ментальном здоровье умственно отсталого ребенка':
+        await bot.send_message(message.from_user.id, information.text511, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии умственно отсталого ребенка':
+        await bot.send_message(message.from_user.id, information.text512, reply_markup=nav.mainMenu)
+
+    if message.text == 'Отсталый, но не сильно':
+        await bot.send_message(message.from_user.id, 'На чем вы бы хотели сосредоточиться?',
+                               reply_markup=nav.Quiz52)
+    if message.text == 'На ментальном здоровье не сильно умственно отсталого ребенка':
+        await bot.send_message(message.from_user.id, information.text521, reply_markup=nav.mainMenu)
+    if message.text == 'На умственном развитии не сильно умственно отсталого ребенка':
+        await bot.send_message(message.from_user.id, information.text522, reply_markup=nav.mainMenu)
+
+
+if __name__ == '__main__':   
+
+
+   executor.start_polling(dp, skip_updates=True)  # сообщения оффлайн игнорируются
+        
+
+                               reply_marku
