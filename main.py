@@ -66,6 +66,4 @@ async def bot_message(message: types.Message):
 
         await bot.send_message(message.from_user.id, "Оставьте этому боту @QWANT2022bot свой отзыв")
 
-    elif message.text == 'Поддержите нас!':
 
-        await bot.send_message(message.from_us
