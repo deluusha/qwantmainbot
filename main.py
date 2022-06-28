@@ -355,6 +355,22 @@ async def bot_message(message: types.Message):
     if message.text == 'На умственном развитии не сильно умственно отсталого ребенка':
         await bot.send_message(message.from_user.id, information.text522, reply_markup=nav.mainMenu)
 
+HEROKU_APP_NAME = "qwantmainbot"
 
-if __name__ == '__main__':   
-   executor.start_polling(dp, skip_updates=True)  # сообщения оффлайн игнорируются
+if HEROKU_APP_NAME is None:  # pooling mode
+    print("Can't detect 'HEROKU_APP_NAME' env. Running bot in pooling mode.")
+    print("Note: this is not a great way to deploy the bot in Heroku.")
+
+    updater.start_polling()
+    updater.idle()
+
+else:  # webhook mode
+    print(f"Running bot in webhook mode. Make sure that this url is correct: https://{HEROKU_APP_NAME}.herokuapp.com/")
+    updater.start_webhook(
+        listen="0.0.0.0",
+        port=PORT,
+        url_path=TOKEN,
+        webhook_url=f"https://{HEROKU_APP_NAME}.herokuapp.com/{TELEGRAM_TOKEN}"
+    )
+
+    updater.idle()
