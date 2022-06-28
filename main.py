@@ -5,6 +5,7 @@ import markups as nav
 import information
 
 TOKEN = '5465375647:AAEPTkq8lk1s4GOFwR5fiwBeuXOUBDob644'
+PORT = int(os.environ.get('PORT', '8443'))
 
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot)
