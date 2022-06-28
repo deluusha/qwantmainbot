@@ -1,3 +1,4 @@
+import os
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher  # отслеживание сообщений от пользователя
 from aiogram.utils import executor
